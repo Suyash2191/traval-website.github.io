@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+   <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+body{
+font-family: sans-serif;
+}
+
+
+        .mobile-container{
+            max-width: 100%;
+            background: #555;
+            height: 55.0rem;
+            color: white;
+        }
+
+        .topnav{
+            overflow: hidden;
+            background: #333;
+            position: relative;
+        }
+        .topnav #myLink{
+            display: none;
+        }
+
+        .topnav a{
+            color: white;
+            padding: 1.4rem 1.5rem;
+            text-decoration: none;
+            font-size: 1.6rem;
+            display: block;
+        }
+
+        .topnav a.icon{
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+        }
+
+        .active{
+            background: #4caf50;
+            color: white;
+        }
+
+        .topnav a:hover{
+            background:#ddd;
+            color: black;
+        }
+        #Language{
+            padding: 0.5rem;
+        }
+
+
+
+
+
+
+
+        .first{
+            height: 50.0rem;
+            overflow: hidden;
+        }
+
+        .carousel{
+            overflow: hidden;
+        }
+
+        .carousel-cell img{
+         height: 50.0rem;
+        }
+
+        .second{
+              background-color: blanchedalmond;;
+            height: 50.0rem;
+            box-sizing: border-box;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        
+        .contact{
+            display: flex;
+            justify-content: center;
+            padding-top: 15.0rem;
+            
+        }
+
+        .contact ul{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .contact ul li{
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact span{
+            display: flex;
+            justify-content: center;
+        }
+
+       .Hotel{
+           display: flex;
+           justify-content: center;
+           height: 20.0rem;
+           width: 15.0rem;
+           box-shadow: 0 0 10px;
+           background-color: white;
+           padding: 6.0rem;
+           transition: 1s;
+           
+       }
+
+       .Hotel:hover{
+           transform:scale(1.1);
+           box-shadow: 0 0 10px;
+           background-color: rgb(248, 177, 46);
+       }
+
+       .Hotel a{
+        font-size: 3.0rem;
+           color: black; 
+           text-decoration: none;
+       }
+
+       .Hotel a:hover{
+           color: white;
+       }
+
+
+       .train{
+           height: 20.0rem;
+           width: 15.0rem;
+           box-shadow: 0 0 10px;
+           padding: 6.0rem;
+           transition: 1s;
+           background-color: white;
+       }
+
+       
+       .train:hover{
+           transform:scale(1.1);
+           box-shadow: 0 0 10px;
+           background-color: rgb(248, 177, 46);
+       }
+
+       .train a{
+        font-size: 3.0rem;
+           color: black;
+           text-decoration: none;
+       }
+
+       .train a:hover{
+           color: white;
+       }
+
+       .bus{
+           height: 20.0rem;
+           width: 15.0rem;
+           box-shadow: 0 0 10px; 
+           padding: 6.0rem;
+           transition: 1s;
+           background-color: white;
+       }
+
+       
+       .bus:hover{
+           transform:scale(1.1);
+           box-shadow: 0 0 10px;
+           background-color: rgb(248, 177, 46);
+       }
+
+       .bus a{
+        font-size: 3.0rem;
+           color: black;
+           text-decoration: none;
+       }
+
+       .bus a:hover{
+           color: white;
+       }
+
+       .Plan{
+           display: flex;
+           justify-content: center;
+           height: 20.0rem;
+           width: 15.0rem;
+           padding: 6.0rem;
+           box-shadow: 0 0 10px;
+           transition: 1s;
+           background-color: white;
+       }
+
+       .Plan:hover{
+           transform:scale(1.1);
+           box-shadow: 0 0 10px;
+           background-color: rgb(248, 177, 46);
+       }
+
+       .Plan a{
+           font-size: 3.0rem;
+           color: black;
+           text-decoration: none;
+       }
+
+       .Plan a:hover{
+           color: white;
+       }
+
+       .name{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-size: 2.0rem;
+       }
+
+       .third{
+           height: 150.0rem;
+           background-color: blanchedalmond;
+
+       }
+
+       .third h1{
+          display: flex;
+          justify-content: center;
+       }
+       
+       
+
+       .state{
+           
+           padding: 2.0rem 2.0rem;
+       }
+
+      .pahila ul{
+          display: flex;
+          justify-content: center;
+      }
+
+      .pahila li{
+         list-style: none;
+         
+      }
+
+      .fis-half{
+          padding-bottom: 10.0rem ;
+          background-color: white;
+          transition: 1s;
+          box-shadow: 0 0 5px;
+      }
+
+      .fis-half:hover{
+          transform:scale(1.2);
+          border-radius: 3.0rem;
+      }
+
+      .pahila .tagline{
+          font-weight: bold;
+          font-size: 0.9rem;
+          margin: 0.6rem 0.6rem;
+      }
+
+      h3{
+          position: relative;
+          top: 2.0rem;
+          left: 2.0rem;
+          color: rgb(66, 44, 3);
+      }
+
+      .star{
+          color: blue;
+          position:relative;
+          left: 3.0rem;
+            
+      }
+
+      .book{
+          position: relative;
+          top: 4.5rem;
+          left: 5.0rem;
+          font-size: 1.3rem;
+          font-weight: bold;
+          background-color: red;
+          color: white;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+      }
+
+      .book:hover{
+         background-color: wheat;
+         color: red; 
+      }
+
+      .star a{
+          text-decoration: none;
+          font-weight: bold;
+      }
+
+      .tra{
+          position: relative;
+          left: 3.0rem;
+          top: 1.0rem;
+      }
+
+      .tra a{
+          text-decoration: none;
+          font-weight: bold;
+      }
+      .sec-half{
+          padding-bottom: 10.0rem ;
+          background-color: white;
+          transition: 1s;
+          box-shadow: 0 0 5px;
+      }
+
+      .sec-half:hover{
+          transform: scale(1.2);
+          border-radius: 3.0rem;
+      }
+
+      
+      .dusra ul{
+          display: flex;
+          justify-content: center;
+      }
+
+      .dusra li{
+          list-style: none;
+      }
+
+      .dusra .tagline{
+          font-size: 0.8rem;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+      }
+
+      .tisra ul{
+          display: flex;
+          justify-content: center;
+      }
+
+      .tisra li{
+          list-style: none;
+      }
+
+      .tisra .tagline{
+          font-size: 0.9rem;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+      }
+
+      
+
+
+      .dusra ul{
+          display: flex;
+          justify-content: center;
+      }
+
+      .dusra li{
+         list-style: none;
+         
+      }
+
+
+
+      .container{
+       display: flex;
+       justify-content: center;
+       height: 50.0rem;
+       align-items: center;
+       width: 100%;
+       padding: 2.5rem 3.0rem;
+       border-radius: 0.5rem;
+      }
+
+
+    .container form .user-details{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 2.0rem 0 1.2rem 0;
+    }
+
+    form .user-details .input-box{
+        width: calc(100% /2 - 2.0rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .user-details .input-box input{
+     height: 4.5rem;
+     width: 100%;
+     outline: none;
+     border-radius: 0.5rem;
+     border: 0.1rem solid #ccc;
+     padding-left: 1.5rem;
+     font-size: 1.6rem;
+     border-bottom-width:0.2rem ;
+     transition: all 0.3s ease;
+    }
+
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid{
+border-color:black ;
+    }
+
+    .user-details .input-box .details{
+        display: block;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        
+    }
+
+    form .gender-details .gender-title{
+        font-size: 2.0rem;
+        font-weight: 500;
+    }
+
+    form .gender-details .category{
+        display: flex;
+        width: 80%;
+        margin: 1.4rem 0;
+        justify-content: space-between;
+    }
+       
+    .gender-details .category label{
+        display: flex;
+        align-items: center;
+    }
+
+    .gender-details .category .dot{
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-right: 1.0rem;
+        border-radius: 50%;
+        border: 0.5rem solid ;
+        transition: all 0.3s ease;
+    }
+
+    #dot-1:checked ~ .category label .one,
+    #dot-2:checked ~ .category label .two{
+        border-color:rgb(153, 153, 147);
+        background: black;
+    }
+
+    form input[type='ratio']{
+        display: none;
+    }
+
+
+    form .button {
+        height: 4.5rem;
+        margin: 4.5rem 0;
+    }
+
+
+    form .button input{
+        height: 100%;
+        width: 100%;
+        outline: none;
+        color: white;
+        border: none;
+        font-size: 1.8rem;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        letter-spacing: 0.1rem;
+        background: red;
+    }
+
+    form .button input:hover{
+        
+        background-color: black ;
+        color: red;
+    }
+
+
+
+
+
+    .five{
+        height: 50.0em;
+        background-color: wheat;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+
+    .Hotels{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10.0rem;
+        
+    }
+
+
+    .Hotels ul{
+        display: flex;
+       
+    }
+
+    .Hotels span{
+    display: flex;
+    padding-bottom: 2.0rem;
+    background-color: wheat;
+    box-shadow: 0 0 1.0rem;
+    }
+
+    .Hotels a{
+        list-style: none;
+        text-decoration: none;
+        font-size: 2.0rem;
+        font-weight: 500;
+        position: relative;
+        
+    }
+
+    .Hotels li{
+        list-style: none;
+        
+    }
+
+    .Hotels h2{
+     position: relative;
+     left: -3.0rem;
+     color: tomato;
+    }
+
+    .Hotels h2:hover{
+      color: black;
+    }
+
+.six{
+    height: 50.0em;
+        background-color: wheat;
+        display: flex;
+        justify-content: center; 
+}
+    .travls{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+
+    .travls ul{
+        display: flex;
+       
+    }
+
+    .travls span{
+    display: flex;
+    padding-bottom: 2.0rem;
+    background-color: wheat;
+    box-shadow: 0 0 1.0rem;
+    }
+
+    .travls a{
+        list-style: none;
+        text-decoration: none;
+        font-size: 2.0rem;
+        font-weight: 500;
+        position: relative;
+    }
+
+.travls li{
+    list-style: none;
+    
+}
+
+.travls h2{
+ position: relative;
+ left: -3.0rem;
+ color: tomato;
+}
+
+.travls h2:hover{
+  color: black;
+}
+
+
+
+.seven{
+    height: 40.0rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.seven h2{
+    display: flex;
+   color: white;
+    justify-content: center;
+}
+
+.seven li{
+
+    text-decoration: none;
+    list-style: none;
+    padding: 0.5rem 3.0rem ;
+   color: rgb(201, 198, 201);
+   font-weight: bold;
+}
+
+.seven a{
+    margin: 1.0rem 8.0rem;
+    font-size: 4.0rem;
+}
+
+.insta{
+    color: rgb(192, 106, 120);
+}
+
+.insta:hover{
+ color: rgb(80, 74, 74);
+}
+
+.fb{
+    color: blue;
+}
+
+.fb:hover{
+ color: rgb(100, 97, 97);
+}
+
+.twi{
+    color: rgb(0, 0, 252);
+}
+
+.twi:hover{
+    color: rgb(119, 116, 116);
+}
+.link{
+    color: blue;
+}
+
+.link:hover{
+    color: rgb(131, 130, 130);
+}
+
+    </style>
+</head>
+<body>
+   <nav class="moblie-container">
+
+    <div class="topnav">
+        <a href="#" class="active">Traval .com</a>
+        <div id="myLink">
+            <ul>
+            <li><a href="login.html" target="_blank"><span><i class="fa fa-user"></i></span>Login</a></li><hr>
+            <li><a href="myfirstproject.html" target="_blank"> <span><i class="fa fa-home"></i></span> Home</a></li><hr>
+           <li> <a href="about.html" target="_blank"> <span><i class="fa fa-address-card"></i></span> About</a></li><hr>
+           <li> <a href="#" > <span><i class="fa fa-language"></i></span> laguage
+               <br> <br><select name="Language" id="Language">
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Marathi">Marathi</option>
+                </select>
+            </a></li>
+              <h5>privacy policy</h5>
+              <h5>Trems of service</h5>
+        </ul>
+        </div>
+        <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    </div>
+
+   </nav>
+
+    <div class="first background">
+        <div class="carousel"
+        data-flickity='{ "wrapAround": true }'>
+        <div class="carousel-cell"><img src="image/5.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="image/4.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="image/3.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="image/2.jpg" alt=""></div>
+        <div class="carousel-cell"><img src="image/1.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <div class="second">
+      
+     <div class="contact">
+         <ul>
+     <li class="Hotel">  <a  href="hotel.html" target="_blank"><span><i class="fa fa-hotel"></i></span> Hotel </a></li>
+    <li class="bus"> <a   href="bus.html" target="_blank"><span><i class="fa fa-train"></i></span>  Bus</a></li> 
+     <li class="train"> <a class="Bus" href="bus.html" target="_blank"><span><i class="fa fa-bus"></i></span >Train</a></li>
+    <li class="Plan">  <a  href="plan.html" target="_blank"><span><i class="fa fa-plane"></i></span>Plan</a></li>
+</ul>
+</div>
+    </div>
+
+
+
+    <div class="third">
+        <h1>Traval.com</h1>
+        
+        <div class="state">
+
+        <div class="pahila"> 
+            <ul>
+            <span class="fis-half"><li class="tajmehal"> <span> <a href="#" ><img src="image/tajmehal.jpg" alt="tajmehal"></a> </span> </li>
+        
+              <li class="tagline">Full package of Delhi 6 Day/5 Night </li>
+              <br>
+             
+          <li class="star"> <a href="#" target="_blank"> Hotel (5 STAR)</a></li>
+           <li class="tra"><a href="#" target="_blank"> Traval</a></li>
+           <h3>59,000/- 30% Discound</h3>
+           <button class="book">BOOK NOW</button>
+        
+               </span>
+       <span class="sec-half"> <li class="gova"> <span> <a href="#"><img src="image/gova.jpg" alt="gova"></a> </span> </li>
+    
+       <li class="tagline">Full package of Gov 6 Day/5 Night </li>
+       <br>
+      
+   <li class="star"> <a href="#" target="_blank"> Hotel (5 STAR)</a></li>
+    <li class="tra"><a href="#" target="_blank"> Traval</a></li>
+    <h3>39,000/- 50% Discound</h3>
+    <button class="book">BOOK NOW</button>
+    
+    </span> 
+        </ul> 
+
+        </div>
+
+        <div class="dusra">
+            <ul>
+        <span class="fis-half"> <li class="hyadrabad"> <span> <a href="#"><img src="image/hyadrabad.jpg" alt="hyadrabad"></a> </span> </li>
+    
+    <li class="tagline">Full package of Hyadrab5ad 6 Day/5 Night </li>
+       <br>
+      
+   <li class="star"> <a href="#" target="_blank"> Hotel (5 STAR)</a></li>
+    <li class="tra"><a href="#" target="_blank"> Traval</a></li>
+    <h3>39,000/- 50% Discound</h3>
+    <button class="book">BOOK NOW</button>
+    
+        </span>
+        <span class="sec-half">  <li class="kashamir"> <span> <a href="#"><img src="image/kashamir.jpg" alt="kashamir"></a> </span> </li>
+    
+        <li class="tagline">Full package of kashamir 6 Day/5 Night </li>
+        <br>
+       
+    <li class="star"> <a href="#" target="_blank"> Hotel (5 STAR)</a></li>
+     <li class="tra"><a href="#" target="_blank"> Traval</a></li>
+     <h3>59,000/- 20% Discound</h3>
+     <button class="book">BOOK NOW</button>
+     
+    </span>
+        </ul>
+        </div>
+
+        <div class="tisra">
+            <ul>
+        <span class="fis-half"> <li class="ladak"> <span> <a href="#"><img src="image/ladak.jpg" alt="ladak"></a> </span> </li>
+        <li class="tagline">Full package of ladak 5 Day/4 Night </li>
+        <br>
+       
+    <li class="star"> <a href="#" target="_blank"> Hotel (5 STAR)</a></li>
+     <li class="tra"><a href="#" target="_blank"> Traval</a></li>
+     <h3>69,000/- 20% Discound</h3>
+     <button class="book">BOOK NOW</button>
+     
+    
+    </span>
+        <span class="sec-half"> <li class="mumbai"> <span> <a href="#"><img src="image/mumbai.1.jpeg" alt="mumbai"></a> </span> </li>
+    
+        <li class="tagline">Full package of mumabai 5 Day/4 Night </li>
+        <br>
+       
+    <li class="star"> <a href="#" target="_blank"> Hotel (5 STAR)</a></li>
+     <li class="tra"><a href="#" target="_blank"> Traval</a></li>
+     <h3>29,000/- 30% Discound</h3>
+     <button class="book">BOOK NOW</button>
+     
+    </span>
+        </ul>
+        </div>
+
+        </div>
+    </div>
+
+
+
+    
+
+
+
+    <div class="container">
+      
+        
+        
+        <form action="#">
+           <div class="user-details">
+               <div class="input-box">
+                   <span class="details">Full Name</span>
+                   <input type="text" placeholder="Enter your name" required>
+               </div>
+
+               <div class="input-box">
+                <span class="details">username</span>
+                <input type="text" placeholder="Enter your username" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">phone Number</span>
+                <input type="text" placeholder="Enter your Number" required>
+            </div>
+
+            <div class="input-box">
+                <span class="details">Password</span>
+                <input type="text" placeholder="Enter your Password" required>
+            </div>
+
+            
+           </div>
+
+           <div class="gender-details">
+               <input type="radio" name="gender" id="dot-1">
+               <input type="radio" name="gender" id="dot-2">
+               
+             <span class="gender-title">Gender</span>
+             <div class="category">
+                 <label for="dot-1">
+                     <span class="dot one"></span>
+                     <span class="gender"> Male</span>
+                 </label>
+
+                 <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender"> Female</span>
+                </label>
+
+                
+             </div>
+           </div>
+
+           <div class="button">
+               <input type="submit" value="Regitation">
+           </div>
+        </form>
+    </div>
+
+
+
+
+    <div class="five">
+      
+<div class="start">
+        <div class="Hotels">
+            
+         <ul>
+             <span>
+                 
+                 <li><a href="#" target="_blank"><img src="image/bedroom.jpg" alt="bedroom">
+                 <img src="image/famaliy.jpg" alt="famaliy">
+                </li>
+
+                 <li><img src="image/swiming.jpg" alt="swiming">
+                 <img src="image/staff.jpg" alt="staff"></li>
+               <h2> Hotel</h2></a>
+             </span>
+         </ul>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+    <div class="six">
+      
+        
+                <div class="travls">
+                    
+                 <ul>
+                     <span>
+                         
+                         <li><a href="#" target="_blank"><img src="image/car.jpg" alt="car">
+                         <img src="image/fri.jpg" alt="firend">
+                        </li>
+        
+                         <li><img src="image/buss.jpg" alt="bus">
+                         <img src="image/tour.jpg" alt="tour"></li>
+                       <h2> Travals</h2></a>
+                     </span>
+                 </ul>
+                </div>
+        
+            
+        
+        
+            </div>
+        
+        
+        
+           <div class="seven">
+ 
+            <h2>Use links</h2>
+
+           <li>Traval.com</li>
+           <li>Home</li>
+           <li>Bus</li>
+           <li>Train</li>
+           <li>plan</li>
+           <li>Hotel</li>
+
+           
+           <li>Delhi</li>
+           <li>gov</li>
+           <li>mumbai</li>
+           <li>hyadrabad</li>
+           <li>kashamir</li>
+           <li>ladak</li>
+            
+
+
+           <a class="insta" href="#"><i class="fa fa-instagram"></i></a>
+          <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+           <a class="twi" href="#"><i class="fa fa-twitter-square"></i></a>
+           <a class="link" href="#"><i class="fa fa-linkedin"></i></a>
+           </div>
+
+
+    <script>
+        function myFunction(){
+            var showhide = document.getElementById('myLink');
+            if(showhide.style.display === "block"){
+                showhide.style.display = "none";
+            }else{
+                showhide.style.display = "block"
+            }
+        }
+        
+    </script>
+</body>
+</html>
